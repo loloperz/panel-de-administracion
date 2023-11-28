@@ -17,12 +17,23 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: hsl(0, 0%, 100%);
   font-family: 'Roboto', sans-serif;
 }
 
-input, label, select, textarea, li, span, p {
+input,
+label,
+select,
+textarea,
+li,
+span,
+p {
   color: hsl(0, 0%, 100%);
   font-family: 'Roboto', sans-serif;
 }
@@ -40,12 +51,33 @@ header {
   padding: 1.5rem 0;
 }
 
-.top-bar-hamburguer button svg {
+
+.menu-button {
+  position: relative;
+  z-index: 3001;
+}
+
+.menu-button button svg {
   width: 3rem;
 }
 
-.top-bar-hamburguer button svg path {
+.menu-button button svg path {
   fill: hsl(0, 0%, 100%);
+}
+
+.menu {
+  background-color: hsl(19, 63%, 45%);
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 200vh;
+  height: 100vh;
+  transition: top 0.3s;
+  z-index: 3000;
+}
+
+.menu.active {
+  top: 0;
 }
 
 .filter {
@@ -55,6 +87,7 @@ header {
   justify-content: center;
   margin-bottom: 2rem;
   padding: 0.2rem 0;
+  z-index: 3001;
 }
 
 .filter-button button svg {
@@ -67,6 +100,59 @@ header {
 
 .filter-button button:hover svg path {
   fill: hsl(34, 79%, 53%);
+}
+
+.filter-modal {
+  background-color: hsla(0, 7%, 3%, 0.5);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3000;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.filter-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.filter-form {
+  background-color: hsl(219, 77%, 46%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1em 2em;
+  border: 5px solid white;
+}
+
+.filter-title span {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.filter-buttons{
+  display: flex;
+  gap: 0.6em;
+}
+
+.filter-buttons .confirm {
+  background-color: green;
+  padding: 0.5em 0.5em;
+  width: 50%;
+}
+
+.filter-buttons .cancel {
+  background-color: red;
+  padding: 0.5em 0.5em;
+  width: 50%;
 }
 
 .crud {
@@ -103,7 +189,61 @@ header {
 .delete-button button:hover svg path {
   fill: hsl(34, 79%, 53%);
 }
+.delete-modal {
+  background-color: hsla(0, 7%, 3%, 0.5);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3003;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
 
+.delete-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.delete-form {
+  background-color: hsl(219, 77%, 46%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  border: 5px solid white;
+  padding: 1em 2em;
+  
+}
+
+.delete-title span {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.delete-buttons{
+  display: flex;
+  text-transform: uppercase;
+  gap: 0.6em;
+  
+}
+
+.delete-buttons .confirm {
+  background-color: green;
+  padding: 0.5em 0.5em;
+  width: 50%;
+}
+
+.delete-buttons .cancel {
+  background-color: red;
+  padding: 0.5em 0.5em;
+  width: 50%;
+}
 .table-data {
   background-color: hsl(226, 64%, 66%);
   padding: 0.5rem;
@@ -126,6 +266,7 @@ header {
 
 .form {
   flex: 2;
+  
 }
 
 .form-buttons {
@@ -136,7 +277,15 @@ header {
   margin-bottom: 1rem;
   padding-right: 0.5rem;
 }
-
+.tabs{
+  align-items: center;
+}
+.tab-main{ 
+  
+}
+.tab-images{
+  
+}
 .form-clean-button button svg,
 .form-save-button button svg {
   width: 2rem;
@@ -151,6 +300,7 @@ header {
 .form-save-button button:hover svg path {
   fill: hsl(34, 79%, 53%);
 }
+
 
 .form-row {
   display: flex;
@@ -191,18 +341,7 @@ header {
   filter: invert(1);
 }
 
-.form-element-input textarea{
+.form-element-input textarea {
   height: 20vh;
   resize: none;
-}
-.cortina{
-         
-          width: 100%;
-          height: 100%;
-          background-color: hsl(19, 63%, 45%);
-        
-}
-
-.cortina active{
-                    display: none;
 }
