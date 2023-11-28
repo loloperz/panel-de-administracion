@@ -1,13 +1,10 @@
 export default (() => {
 
+   const menuButton = document.querySelector('.menu-button');
+   const menu = document.querySelector(".menu");
 
-    
-let cortina = document.getElementsByClassName("cortina");
-let despliegue =document.getElementsByClassName('top-bar-hamburguer');
-
- despliegue.addEventListener("click", () => {
-    cortina.classList.toggle("active");
- });
-
-
+   menuButton?.addEventListener("click", () => {
+      menu.classList.toggle("active");
+   });
 })();
+ 
