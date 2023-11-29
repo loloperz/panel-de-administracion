@@ -1,9 +1,10 @@
 export default (() => {
 
-    const formSection = document.querySelector('.form');
-    const tabs = document.querySelector("form");
-    formSection?.addEventListener("click", async (event) => {
-        if (event.target.closest(".tabs"))
-        document.form.innerHtml="";
+    const mainTab = document.querySelector('.tab-main');
+    const tabs = document.querySelector('.tab');
+
+    mainTab?.addEventListener("click", () => {
+        tabs.classList.toggle("active");
+        
     });
 })();

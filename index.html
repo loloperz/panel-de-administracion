@@ -22,7 +22,6 @@
 
 <body>
     <header>
-
         <div class="top-bar-title">
             <h1>Usuarios</h1>
         </div>
@@ -37,6 +36,53 @@
         <div class="menu"></div>
     </header>
     <main>
+        <div class="delete-modal">
+            <div class="delete-form">
+                <div class="delete-title">
+                    <span>quieres eliminar este registro?</span>
+                </div>
+                <div class="delete-buttons">
+                    <button class="confirm">si</button>
+                    <button class="cancel">no </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="filter-modal">
+            <div class="filter-form">
+                <div class="filter-title">
+                    <span>filtraje de tabla</span>
+                </div>
+                <div class="form-element">
+                    <div class="form-element-label">
+                        <label for="name">
+                            Nombre
+                        </label>
+                    </div>
+                    <div class="form-element-input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="form-element">
+                    <div class="form-element-label">
+                        <label for="email">
+                            Email
+                        </label>
+                    </div>
+                    <div class="form-element-input">
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="confirm">filtrar</button>
+                    <button class="cancel">cancelar </button>
+                </div>
+
+            </div>
+        </div>
+        
         <div class="crud">
             <section class="table">
                 <section class="filter">
@@ -48,39 +94,6 @@
                                     d="M11 11L16.76 3.62A1 1 0 0 0 16.59 2.22A1 1 0 0 0 16 2H2A1 1 0 0 0 1.38 2.22A1 1 0 0 0 1.21 3.62L7 11V16.87A1 1 0 0 0 7.29 17.7L9.29 19.7A1 1 0 0 0 10.7 19.7A1 1 0 0 0 11 18.87V11M13 16L18 21L23 16Z" />
                             </svg>
                         </button>
-                    </div>
-                    <div class="filter-modal">
-                        <div class="filter-form">
-                            <div class="filter-title">
-                                <span>filtraje de tabla</span>
-                            </div>
-                            <div class="form-element">
-                                <div class="form-element-label">
-                                    <label for="name">
-                                        Nombre
-                                    </label>
-                                </div>
-                                <div class="form-element-input">
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="form-element">
-                                <div class="form-element-label">
-                                    <label for="email">
-                                        Email
-                                    </label>
-                                </div>
-                                <div class="form-element-input">
-                                    <input type="text">
-                                </div>
-                            </div>
-
-                            <div class="filter-buttons">
-                                <button class="confirm">filtrar</button>
-                                <button class="cancel">cancelar </button>
-                            </div>
-
-                        </div>
                     </div>
                 </section>
                 <article class="table-record">
@@ -126,18 +139,6 @@
                                         d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
                                 </svg>
                             </button>
-                        </div>
-                        <div class="delete-modal">
-                            <div class="delete-form">
-                                <div class="delete-title">
-                                    <span>quieres eliminar este registro?</span>
-                                </div>
-                                <div class="delete-buttons">
-                                    <button class="confirm">si</button>
-                                    <button class="cancel">no </button>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                     <div class="table-data">
@@ -210,6 +211,7 @@
                             imagenes
                         </button>
                     </div>
+                
                     <div class="form-clean-button">
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -229,7 +231,8 @@
                         </button>
                     </div>
                 </div>
-                <form>
+            
+                <form class="tab">
                     <div class="form-row">
                         <div class="form-element">
                             <div class="form-element-label">
@@ -366,6 +369,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </form>
             </section>
         </div>

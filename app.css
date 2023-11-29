@@ -270,6 +270,10 @@ header {
   flex: 2;
 
 }
+.tab.active{
+  visibility: 0;
+  opacity: 0;
+}
 
 .form-buttons {
   background-color: hsl(0, 0%, 100%);
@@ -282,9 +286,11 @@ header {
 
 
 
-.tab-main {}
+.tab-main { border: 2px solid black;}
 
-.tab-images {}
+.tab-images {
+  border: 2px solid black;
+}
 
 .form-clean-button button svg,
 .form-save-button button svg {

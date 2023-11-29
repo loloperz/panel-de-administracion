@@ -1,10 +1,18 @@
-export default (() => {
+ export default(() => {
 
-    const filterButton = document.querySelector('.filter-button');
     const filterModal = document.querySelector(".filter-modal");
 
-    filterButton?.addEventListener("click", () => {
-        filterModal.classList.toggle("active");
+    document.addEventListener("openModalFilter", (event) => {
+        filterModal.classList.add("active");
     });
- })();
-  
+
+    filterModal?.addEventListener("click", async (event) => {
+        if (event.target.closest(".confirm")){
+        }
+
+        if (event.target.closest(".cancel")){
+            filterModal.classList.remove("active");
+        }
+    })
+    
+})();
