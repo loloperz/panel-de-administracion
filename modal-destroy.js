@@ -10,9 +10,9 @@ export default(() => {
         if (event.target.closest(".confirm")){
         }
 
-        if (event.target.closest(".cancel")){
-            deleteModal.classList.remove("active");
-        }
+        // if (event.target.closest(".cancel")){
+        //     deleteModal.classList.remove("active");
+        // }
         
     })
     

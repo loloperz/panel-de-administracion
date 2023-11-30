@@ -319,7 +319,12 @@ header {
 .form-save-button button:hover svg path {
   fill: hsl(34, 79%, 53%);
 }
-
+.tab-content{
+  display: none;
+}
+.tab-content.active{
+  display: block;
+}
 
 .form-row {
   display: flex;
@@ -363,4 +368,7 @@ header {
 .form-element-input textarea {
   height: 20vh;
   resize: none;
+}
+.validate.invalid{
+  border-bottom: 1px solid red;
 }
