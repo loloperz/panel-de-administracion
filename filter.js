@@ -18,7 +18,7 @@ class Filter extends HTMLElement {
         /*html*/
         `
           <style>
-  
+            
          .filter {
              align-items: center;
              background-color: hsl(0, 0%, 100%);
