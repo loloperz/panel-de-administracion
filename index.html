@@ -28,15 +28,11 @@
     <main>
         <filter-component></filter-component>
         <modal-destroy-component></modal-destroy-component>
+        <crud-component>
+            <table-component slot="table"></table-component>
+            <form-component slot="form"></form-component>
+        </crud-component>
 
-        <div class="crud">
-            <section class="table-section">
-                <table-component></table-component>
-            </section>
-            <section class="form-section">
-                <form-component></form-component>
-            </section>
-        </div>
         <notification-component></notification-component>
     </main>
 </body>
